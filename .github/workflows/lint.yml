@@ -11,7 +11,7 @@ jobs:
     name: lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: hadolint/hadolint-action@v3.1.0
         with:
@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get -y install npm libwebp-dev
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: "tidbyt/pixlet"
           ref: "v0.34.0"
